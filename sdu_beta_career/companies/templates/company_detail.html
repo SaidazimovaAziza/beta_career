@@ -1,0 +1,8 @@
+
+{% extends "base.html" %}
+{% block main %}
+    <div class="post">
+      <h2>{{ compamy.name_of_company}}</h2>
+        <p>{{ company.description|linebreaksbr }}</p>
+    </div>
+{% endblock %}
