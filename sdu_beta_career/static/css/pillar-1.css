@@ -8721,3 +8721,11 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
     border-radius: 4px;
   }
 }
+.company_list {
+  background-color: #5a6268;
+  padding-bottom: 20px;
+}
+.container-fluid #h1{
+  margin-left: auto;
+  margin-right: auto;
+}

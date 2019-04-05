@@ -1,22 +1,32 @@
+
 {% extends "base.html" %}
+
 {% block main %}
+
    <main class="page-content">
-    <div class="container-fluid">
+    <div class="container-fluid" style="">
 
 
-  <h2>Companies</h2>
+  <h1 align="center">Companies</h1>
 
 
- <div class="row">
+
+
+
 {% for company in companies %}
 
+<div class="company_list"  style="background-color: #eeeeee; margin-bottom: 20px; padding-bottom: 5px; border-radius: 5px; margin-right:800px;">
+  <h3 style="margin: 10px; padding: 10px;"><a href="{% url 'company_detail' pk=company.pk %}">{{ company.name_of_company }}</a></h3>
+        <a href="" style="margin-left: 10px;" >{{ company.address }}</a>
+        <p style="margin-left: 10px;">{{ company.description|linebreaksbr }}</p>
 
-  <h2><a href="{% url 'company_detail' pk=company.pk %}">{{ company.name_of_company }}</h2>
-        <h1><a href="">{{ company.address }}</a></h1>
-        <p>{{ company.description|linebreaksbr }}</p>
 
-  </div>
-  </div>
+
+</div>
+
+ {% endfor %}
+
+    </div>
   </main>
-{% endfor %}
+
 {% endblock %}
