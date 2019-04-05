@@ -1,8 +1,14 @@
 
 {% extends "base.html" %}
 {% block main %}
-    <div class="post">
-      <h2>{{ compamy.name_of_company}}</h2>
-        <p>{{ company.description|linebreaksbr }}</p>
+  <main class="page-content">
+    <div class="company"  style="background-color: #eeeeee; border-radius: 5px;  margin-right: 200px;">
+      <h1 >    <strong>{{ company.name_of_company}}  companydocker-compose -f local.yml run --rm django python manage.py createsuperuser</strong></h1>
+      <p  >Description:    <strong>{{ company.description|linebreaksbr }}</strong></p>
+      <p >Address:    <strong>{{ company.address}}</strong></p>
+      <p >Contacts:   <strong>{{ company.contacts}}</></p>
+      <p></p>
     </div>
+
+  </main>ç
 {% endblock %}
